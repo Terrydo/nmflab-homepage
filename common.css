@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* 스크롤바 영역 */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+/* 스크롤바 막대 설정 */
+*::-webkit-scrollbar-thumb {
+  height: 1%;
+  background: #a8a8a8be;
+  border: 1px solid transparent;
+  background-clip: content-box;
+  border-radius: 10px;
+}
+/* 스크롤바 뒷 배경 색상 */
+*::-webkit-scrollbar-track {
+  background: #f7faffde;
+  box-shadow: inset 5px 4px 5px 5px rgba(0, 0, 0, .3);
+}
+body::-webkit-scrollbar { width: 6px; height: 6px; }
+
+/* reset*/
+html, body, div, span, h1, h2, h3, h4, h5, h6,
+p, a, em, img, strong, ol, ul, li,
+form, label, article, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, div {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+ol, ul, li {
+  list-style: none;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+/* all */
+body {
+  color: #000;
+  font-family: 'SUIT Variable', sans-serif;
+}
+#wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F5F6;
+}
+/* header */
+header {
+  background-color: #FCFCFC;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+.header,
+.nav-menu {
+  display: flex;
+}
+.header {
+  margin: auto;
+  padding: 1.1979vw 0; /*23px 0*/
+  width: 78.3333vw; /*1504px*/
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  width: 9vw; /*172~3px*/
+  height: auto;
+}
+.nav-menu {
+  justify-content: flex-end;
+  gap: 3.125vw; /*60px*/
+  font-size: 0.9375vw; /*18px*/
+  font-weight: 500;
+  letter-spacing: 0.54px;
+}
+.nav-menu > li {
+  position: relative;
+}
+.nav-menu > li::after {
+  content: "";
+  position: absolute;
+  left: -0.5208vw; /*-10px*/
+  top: 0.1562vw; /*3px*/
+  height: 0.8333vw; /*16px*/
+  width: 2px;
+}
+.nav-menu > li:nth-child(1)::after {background-color: #63DF9F;}
+.nav-menu > li:nth-child(2)::after {background-color: #5BCC91;}
+.nav-menu > li:nth-child(3)::after {background-color: #2FAB63;}
+.nav-menu > li:nth-child(4)::after {background-color: #238B4F;}
+.nav-menu > li:nth-child(5)::after {background-color: #17673F;}
+.nav-menu > li:nth-child(6)::after {background-color: #0F472B;}
+
+/* footer */
+footer {
+  margin-top: auto;
+  background-color: #FCFCFC;
+  font-family: "Inter", sans-serif;
+  color: #272928;
+  font-size: 0.9375vw; /*18px*/
+  line-height: 1.4583vw; /*28px*/
+  border-radius: 1.0416vw 1.0416vw 0 0; /*20px 20px 0 0*/
+}
+.footer,
+.link-list {
+  display: flex;
+}
+.footer {
+  margin: auto;
+  padding: 3.125vw 0; /*60px*/
+  width: 72.9166vw; /*1400px*/
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.group-name {
+  font-weight: 700;
+}
+.group-info {
+  margin: 0.625vw 0 2.0833vw; /*12px 0 40px*/
+}
+.group-info > p:first-child {
+  margin-bottom:  0.2083vw; /*4px*/
+}
+.copy {
+  margin-top: 0.625vw; /*12px*/
+  font-size: 0.7291vw; /*14px*/
+  font-weight: 300;
+  line-height: 1.0416vw; /*20px*/
+}
+.link-list {
+  justify-content: flex-end;
+  gap: 1.4583vw; /*28px*/
+}
+.link-list img {
+  width: 2.5vw; /*48px*/
+  height: 2.5vw;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  /* header */
+  .header {
+    disPlay: block;
+    padding: 4.4444vw 6.6666vw; /*16px 24px*/
+    width: auto;
+    margin-top: 12.7777vw; /*46px*/
+  }
+  .nav-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo img {
+    width: 36vw; /*130px*/
+  }
+  input[id="mo-menu"] {
+    display: none;
+  }
+  input[id="mo-menu"] + label {
+    display: block;
+    width: 5.5555vw; /*20px*/
+    height: 4.4444vw; /*16px*/
+    position: relative;
+    cursor: pointer;
+  }
+  input[id="mo-menu"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.5555vw; /*2px*/
+    border-radius: 2.7777vw; /*10px*/
+    background: #272928;
+    transition: all .35s;
+  }
+  input[id="mo-menu"] + label span:nth-child(1) {
+    top: 0;
+  }
+  input[id="mo-menu"] + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  input[id="mo-menu"] + label span:nth-child(3) {
+    bottom: 0;
+  }
+  input[id="mo-menu"]:checked + label span:nth-child(1) {
+    top: 50%;
+    transform:translateY(-50%) rotate(45deg);
+  }
+  input[id="mo-menu"]:checked + label span:nth-child(2) {
+    opacity: 0;
+  }
+  input[id="mo-menu"]:checked + label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+  .nav-menu {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    gap: 7.7777vw; /*28px*/
+    font-size: 3.8888vw; /*14px*/
+    letter-spacing: 0.1166vw; /*0.42px*/
+    margin: 8.8888vw 0 4.4444vw; /*s32px 0 16px*/
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-menu > li {
+    padding-left: 7.7777vw; /*28px*/
+    position: relative;
+  }
+  .nav-menu > li::after {
+    content: "";
+    position: absolute;
+    left: 3.0555vw; /*11px*/
+    top: 0.9722vw; /*3.5px*/
+    height: 2.7777vw; /*10px*/
+    width: 2px;
+  }
+
+  /* footer */
+  footer {
+    font-size: 3.3333vw; /*12px*/
+    line-height: 4.4444vw; /*16px*/
+    height: 48.8888vw; /*176px*/
+    border-radius: 5.5555vw 5.5555vw 0 0; /*20px 20px 0 0*/
+  }
+  .footer {
+    padding: 6.6666vw 0 11.1111vw; /*24px 0 40px*/
+    width: 86.6666vw; /*312px*/
+    flex-direction: column-reverse;
+    gap: 11.1111vw; /*40px*/
+  }
+  .group-info {
+    margin: 4.4444vw 0 11.1111vw; /*16px 0 40px*/
+  }
+  .group-info > p:first-child {
+    margin-bottom: 2.2222vw; /*8px*/
+  }
+  .copy {
+    margin-top: 2.2222vw; /*8px*/
+    font-size: 2.7777vw; /*10px*/
+    line-height: 5.5555vw; /*20px*/
+  }
+  .link-list {
+    gap: 5.5555vw; /*20px*/
+  }
+  .link-list img {
+    width: 7.7777vw; /*48px*/
+    height: 7.7777vw;
+  }
+}

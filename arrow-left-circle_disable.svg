@@ -1,0 +1,11 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="arrow-left-circle" opacity="0.2" clip-path="url(#clip0_375_546)">
+<circle id="Ellipse 5" cx="26" cy="26" r="25" transform="matrix(-1 0 0 1 52 0)" stroke="black" stroke-width="2"/>
+<path id="Vector 27" d="M39 26H14.5M14.5 26L24.5 16M14.5 26L24.5 36" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_375_546">
+<rect width="52" height="52" fill="white" transform="matrix(-1 0 0 1 52 0)"/>
+</clipPath>
+</defs>
+</svg>
